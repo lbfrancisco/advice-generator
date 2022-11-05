@@ -1,0 +1,112 @@
+:root {
+  --colors-light-cyan: hsl(193, 38%, 86%);
+  --colors-neon-green: hsl(150, 100%, 66%);
+
+  --colors-blue-300: hsl(217, 19%, 38%);
+  --colors-blue-500: hsl(217, 19%, 24%);
+  --colors-blue-700: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100vh;
+
+  background-color: var(--colors-blue-700);
+}
+
+body * {
+  font-family: "Manrope", sans-serf;
+  font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+
+  text-align: center;
+  border-radius: 12px;
+
+  max-width: 500px;
+  padding: 32px;
+
+  position: relative;
+
+  background-color: var(--colors-blue-500);
+}
+
+main > img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: var(--colors-light-cyan);
+}
+
+h2 {
+  font-size: 0.8rem;
+  color: var(--colors-neon-green);
+  letter-spacing: 0.3em;
+}
+
+button {
+  padding: 16px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--colors-neon-green);
+}
+
+.dice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice button {
+  position: absolute;
+  transition: box-shadow .5s, transform 1s;
+}
+
+.dice button:hover {
+  box-shadow: 0 0 1rem var(--colors-neon-green), 0 0 3rem var(--colors-neon-green);
+  transform: rotate(360deg);
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--colors-light-cyan);
+  text-align: center;
+  margin-top: 72px;
+}
+
+footer a {
+  font-size: 0.8rem;
+  color: var(--colors-neon-green);
+  transition: text-shadow .5s;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-shadow: 0 0 1rem var(--colors-neon-green), 0 0 3rem var(--colors-neon-green);
+}
+
+@media (max-width: 550px) {
+  main {
+    margin-inline: 16px;
+  }
+}
